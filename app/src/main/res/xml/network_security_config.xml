@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">freemaart.com</domain>
+        <domain includeSubdomains="true">173.255.211.88</domain>
+    </domain-config>
+</network-security-config>

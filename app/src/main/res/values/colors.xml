@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0c2c55</color>
+    <color name="colorPrimaryDark">#FF1C285C</color>
+    <color name="colorAccent">#40ffff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorLogin">#FF1C285C</color>
+    <color name="colorBackground">#FFF3FAFC</color>
+    <color name="remark_color">#FF4A4A4A</color>
+
+    <color name="appColorBlue">#FF2196F3</color>
+
+    <color name="appActionBarColor">#1D285C</color>
+    <color name="appBgColor">#F5FCFE</color>
+    <color name="dividerColor">#D6D6D6</color>
+
+    <color name="colorInputNormal">#AAA</color>
+    <color name="colorInputSelected">@color/appColorBlue</color>
+    <color name="colorInputBg">@color/colorWhite</color>
+</resources>

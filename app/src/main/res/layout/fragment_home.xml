@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="27dp"
+        app:srcCompat="@drawable/ic_logout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp">
+
+        <TextView
+            android:id="@+id/current_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="109dp"
+            android:text="22/22/22"
+            android:textColor="#FF1C285C"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:layout_width="127dp"
+            android:layout_height="127dp"
+            android:layout_marginTop="33dp">
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="127dp"
+                android:layout_height="127dp"
+                app:cpb_indeterminate_mode="true"
+                app:cpb_progressbar_color="#007DD6" />
+
+            <TextView
+                android:id="@+id/leave_count_text"
+                tools:text="23"
+                android:layout_gravity="center"
+                android:textSize="48sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="Leaves this month"
+            android:textColor="#FF1C285C"
+            android:textSize="20sp"
+            android:textStyle="bold|normal" />
+
+        <Button
+            android:id="@+id/mark_attendance_button"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/btn_shape_round"
+            android:text="Mark Attendance"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</FrameLayout>

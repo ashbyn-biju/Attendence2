@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="320dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/appColorBlue"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:text="Absent Dates"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/appColorBlue"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        tools:text="January 2018" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/date_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:listitem="@layout/monthly_report_date_cell" />
+</LinearLayout>

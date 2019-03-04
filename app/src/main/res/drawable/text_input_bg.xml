@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/colorInputSelected" />
+                    <padding android:bottom="1dp" android:left="0dp" android:right="0dp" android:top="0dp" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/colorInputBg" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/colorInputNormal" />
+                    <padding android:bottom="1dp" android:left="0dp" android:right="0dp" android:top="0dp" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/colorInputBg" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

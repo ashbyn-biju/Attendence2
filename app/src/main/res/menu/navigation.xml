@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/tab_profile_state"
+        android:title="@string/title_profile" />
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/tab_home_state"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_report"
+        android:icon="@drawable/tab_report_state"
+        android:title="@string/title_report" />
+
+
+</menu>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEBF4F7"
+    tools:context=".report.ReportFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include_appbar_leave_report"
+            layout="@layout/appbar_leave_report" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/include_appbar_leave_report"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/monthly_report_list_item" />
+
+        <FrameLayout
+            android:layout_below="@id/include_appbar_leave_report"
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="4dp">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:theme="@style/AppTheme.Special"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_gravity="center_vertical"
+                android:indeterminate="true" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="60dp"
+        app:backgroundTint="#FF2196F3"
+        android:clickable="true"
+        android:src="@drawable/baseline_filter_list_white_24"
+        app:fabSize="normal" />
+
+</FrameLayout>
