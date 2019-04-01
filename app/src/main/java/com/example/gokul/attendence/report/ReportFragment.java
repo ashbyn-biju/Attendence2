@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import com.example.gokul.attendence.DashboardActivity;
 import com.example.gokul.attendence.LogoutActivity;
 import com.example.gokul.attendence.R;
 import com.example.gokul.attendence.api.MonthlyAbsenteesResponse;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -103,6 +105,7 @@ public class ReportFragment extends Fragment implements ReportFilterDialogListen
         AppDelegate.api.getMonthlyAbsentees(sM, sY, eM, eY).enqueue(new Callback<List<MonthlyAbsenteesResponse>>() {
             @Override
             public void onResponse(@Nullable Call<List<MonthlyAbsenteesResponse>> call, @Nullable Response<List<MonthlyAbsenteesResponse>> response) {
+                Log.d("Service Response", " "+ new Gson().toJson(response.body()));
                 try {
                     normalState();
                     List<MonthlyAbsenteesResponse> body = response.body();

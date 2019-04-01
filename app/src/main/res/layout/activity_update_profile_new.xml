@@ -159,8 +159,7 @@
             android:layout_marginLeft="28dp"
             android:layout_marginRight="28dp"
             android:background="@color/colorWhite"
-            android:drawableStart="@drawable/ic_mail"
-            android:drawableLeft="@drawable/ic_mail"
+            android:drawableLeft="@mipmap/ic_email_icon_bg"
             android:drawablePadding="16dp"
             android:fontFamily="@font/avenir"
             android:hint="Email / employee ID"
@@ -193,8 +192,7 @@
             android:layout_marginLeft="28dp"
             android:layout_marginRight="28dp"
             android:background="@color/colorWhite"
-            android:drawableStart="@drawable/ic_phone_call"
-            android:drawableLeft="@drawable/ic_phone_call"
+            android:drawableLeft="@mipmap/ic_call_icon_bg"
             android:drawablePadding="16dp"
             android:fontFamily="@font/avenir"
             android:textSize="16sp"
@@ -227,8 +225,7 @@
             android:layout_marginRight="28dp"
             android:gravity="center_vertical"
             android:background="@color/colorWhite"
-            android:drawableStart="@drawable/event"
-            android:drawableLeft="@drawable/event"
+            android:drawableLeft="@mipmap/ic_event_icon_bg"
             android:drawablePadding="16dp"
             android:fontFamily="@font/avenir"
             android:clickable="true"
@@ -266,7 +263,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_tie" />
+                android:src="@mipmap/ic_tie_icon_bg" />
 
             <RadioGroup
                 android:layout_width="0dp"

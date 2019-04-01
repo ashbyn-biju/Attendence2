@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,8 @@ import com.example.gokul.attendence.AppDelegate;
 import com.example.gokul.attendence.DashboardActivity;
 import com.example.gokul.attendence.R;
 import com.example.gokul.attendence.api.LoginResponse;
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
@@ -101,6 +104,9 @@ public class LoginActivity extends AppCompatActivity {
         ).enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(@NonNull Call<LoginResponse> call, @NonNull Response<LoginResponse> response) {
+
+
+                Log.d("Service Response", " "+ new Gson().toJson(response.body()));
                 try {
                     normalState();
                     LoginResponse auth = response.body();
@@ -119,6 +125,8 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         Snackbar.make(mLoginRootLayout, R.string.login_err_auth, Snackbar.LENGTH_SHORT).show();
                     }
+                } catch(JsonSyntaxException e){
+                    Log.d("Exception :- " , "JsonSyntaxException");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -130,6 +138,9 @@ public class LoginActivity extends AppCompatActivity {
                     normalState();
                     Snackbar.make(mLoginRootLayout, R.string.app_err_network, Snackbar.LENGTH_SHORT).show();
                     t.printStackTrace();
+
+                } catch(JsonSyntaxException e){
+                    Log.d("Exception :- " , "JsonSyntaxException");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -15,6 +15,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -413,6 +414,7 @@ public class MarkAttendanceActivity extends AppCompatActivity {
         if (mLocation != null) {
             lat = String.format(Locale.US, "%.5f", mLocation.getLatitude());
             lng = String.format(Locale.US, "%.5f", mLocation.getLongitude());
+
         } else {
             Toast.makeText(this, "Please wait, we are getting your location", Toast.LENGTH_SHORT).show();
             return;
@@ -436,7 +438,7 @@ public class MarkAttendanceActivity extends AppCompatActivity {
         long siteId = mSites.get(pos - 1).id;
 
         String location = mLocationText.getText().toString();
-
+        Log.d("Lat/lng saved :- ", lat + " - " + lng);
         busyState();
         AppDelegate.api.markAttendance(
                 MultipartBody.Part.createFormData("datetime", dateTime),

@@ -116,7 +116,7 @@
                         android:layout_height="16dp"
                         android:layout_gravity="center"
                         android:layout_weight=".5"
-                        app:srcCompat="@drawable/ic_mail" />
+                        android:src="@mipmap/ic_mail_icon"/>
 
                     <EditText
                         android:id="@+id/email_input"
@@ -145,7 +145,7 @@
                         android:layout_height="16dp"
                         android:layout_gravity="center"
                         android:layout_weight=".5"
-                        app:srcCompat="@drawable/ic_phone_call" />
+                        android:src="@mipmap/ic_call" />
 
                     <EditText
                         android:id="@+id/phone_input"
@@ -173,7 +173,7 @@
                         android:layout_height="16dp"
                         android:layout_gravity="center"
                         android:layout_weight=".5"
-                        app:srcCompat="@drawable/event" />
+                        android:src="@mipmap/ic_dob" />
 
                     <EditText
                         android:id="@+id/dob_input"
@@ -201,7 +201,7 @@
                         android:layout_height="16dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_tie" />
+                        android:src="@mipmap/ic_tie_icon" />
 
                     <RadioGroup
                         android:layout_width="wrap_content"
